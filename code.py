@@ -5,7 +5,9 @@ from pprint import pprint
 
 MAPQUEST_API_KEY = 'Ing5xxWtWc0FrjDV2W0vA7EVMFtiIj7N'
 MBTA_API_KEY = '6018a853c6e8432694c83919c91e0892'
-MBTA_BASE_URL = 'https://api-v3.mbta.com/docs/swagger/swagger.json'
+MAPQUEST_BASE_URL = "http://open.mapquestapi.com/geocoding/v1/address"
+MBTA_BASE_URL = "https://api-v3.mbta.com/stops"
+
 
 def ask_location(loc):
     d = {}
