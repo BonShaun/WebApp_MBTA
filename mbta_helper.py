@@ -22,7 +22,7 @@ def get_json(url):
     response_data = json.loads(response_text)
     return response_data
 
-# print(get_json(url))
+
 
 def get_lat_long(place_name):
     """
@@ -34,7 +34,7 @@ def get_lat_long(place_name):
     place_name = place_name.replace(' ','%20')
     url = f'http://www.mapquestapi.com/geocoding/v1/address?key={MAPQUEST_API_KEY}&location={place_name}'
     response_data = get_json(url)
-    # pprint(response_data)
+    pprint(response_data)
     response_latlng = response_data['results'][0]['locations'][0]['displayLatLng']
     # pprrint(response_latlng)
     lat = response_latlng['lat']
@@ -42,6 +42,8 @@ def get_lat_long(place_name):
     return lat,lng
 
 print(get_lat_long("Prudential Center"))
+
+
 
 def get_nearest_station(latitude, longitude):
     """
@@ -79,13 +81,13 @@ def find_stop_near(place_name):
         #return should be simple as possible. dont return full sentence. Just return "Station Name. True"
 
 
-def main():
-    """
-    You can all the functions here
-    """
-    print(find_stop_near('Babson College'))
+# def main():
+#     """
+#     You can all the functions here
+#     """
+#     print(find_stop_near('Babson College'))
 
 
-if __name__ == '__main__':
-    main()
-    # pass
+# if __name__ == '__main__':
+#     main()
+#     # pass
