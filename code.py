@@ -20,7 +20,7 @@ def ask_location(loc):
     latlng = (response_data['results'][0]['locations'][0]['displayLatLng'])
     return latlng
 
-latlng = ask_location('Babson College')
+latlng = ask_location('Prudential Center')
 print(latlng)
 lat = latlng['lat']
 lng = latlng['lng']
@@ -32,8 +32,8 @@ url_MBTA = f'{MBTA_BASE_URL}?api_key={MBTA_API_KEY}&filter[latitude]={lat}&filte
 f_MBTA = urllib.request.urlopen(url_MBTA)
 response_text_MBTA = f_MBTA.read().decode('utf-8')
 response_data_MBTA = json.loads(response_text_MBTA)
-
-
+station = response_data_MBTA['data'][0]['attributes']['name']
+wheelchair = response_data_MBTA['data'][0]['attributes']['wheelchair_boarding']
 
 
 
