@@ -33,7 +33,9 @@ f_MBTA = urllib.request.urlopen(url_MBTA)
 response_text_MBTA = f_MBTA.read().decode('utf-8')
 response_data_MBTA = json.loads(response_text_MBTA)
 
-print(response_data_MBTA)
+
+
+
 
 
 
