@@ -4,7 +4,8 @@ import json
 from pprint import pprint
 
 MAPQUEST_API_KEY = 'Ing5xxWtWc0FrjDV2W0vA7EVMFtiIj7N'
-MBTA_API_KEY : '6018a853c6e8432694c83919c91e0892'
+MBTA_API_KEY = '6018a853c6e8432694c83919c91e0892'
+MBTA_BASE_URL = 'https://api-v3.mbta.com/docs/swagger/swagger.json'
 
 def ask_location(loc):
     d = {}
@@ -25,8 +26,13 @@ index = 0
 
 
 
-# url_MBTA = f'https://api-v3.mbta.com/docs/swagger/swagger.json/data/{index}/attributes/latitude={lat}/data/{index}/attributes/longitude={lng}'
-# f_MBTA = urllib.request.urlopen(url_MBTA)
-# response_text_MBTA = f_MBTA.read().decode('utf-8')
-# response_data_MBTA = json.loads(response_text_MBTA)
+url_MBTA = f'{MBTA_BASE_URL}?api_key={MBTA_API_KEY}&filter[latitude]={lat}&filter[longitude]={lng}&sort=distance'
+f_MBTA = urllib.request.urlopen(url_MBTA)
+response_text_MBTA = f_MBTA.read().decode('utf-8')
+response_data_MBTA = json.loads(response_text_MBTA)
+
+print(response_data_MBTA)
+
+
+
 
