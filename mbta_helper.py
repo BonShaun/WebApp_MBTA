@@ -1,4 +1,4 @@
-# Useful URLs (you need to add the appropriate parameters for your requests)
+
 import urllib.request
 import urllib.parse
 import json
@@ -10,7 +10,6 @@ MAPQUEST_BASE_URL = "http://open.mapquestapi.com/geocoding/v1/address"
 MBTA_BASE_URL = "https://api-v3.mbta.com/stops"
 
 
-# Your API KEYS (you need to use your own keys - very long random characters)
 
 def get_json(url):
     """
@@ -34,9 +33,7 @@ def get_lat_long(place_name):
     place_name = place_name.replace(' ','%20')
     url = f'http://www.mapquestapi.com/geocoding/v1/address?key={MAPQUEST_API_KEY}&location={place_name}'
     response_data = get_json(url)
-    pprint(response_data)
     response_latlng = response_data['results'][0]['locations'][0]['displayLatLng']
-    # pprrint(response_latlng)
     lat = response_latlng['lat']
     lng = response_latlng['lng']
     return lat,lng
@@ -62,7 +59,6 @@ def get_nearest_station(latitude, longitude):
     except:
         return None, None
 
-# print(get_nearest_station(42.3489, -71.08182))
 
 def find_stop_near(place_name):
     """
@@ -81,29 +77,14 @@ def find_stop_near(place_name):
         
     return stop, station_accessible
 
-        #return should be simple as possible. dont return full sentence. Just return "Station Name. True"
 
 
-# <<<<<<< HEAD
-# <<<<<<< HEAD
+
 # def main():
 #     """
 #     You can all the functions here
 #     """
 #     print(find_stop_near('Prudential Center'))
-# =======
-# =======
-# >>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
-# def main():
-#     """
-#     You can all the functions here
-#     """
-#     print(find_stop_near('Babson College'))
-# <<<<<<< HEAD
-# >>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
-# =======
-# >>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
-
 
 # if __name__ == '__main__':
 #     main()
