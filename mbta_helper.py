@@ -45,6 +45,8 @@ def get_lat_long(place_name):
 
 
 
+
+
 def get_nearest_station(latitude, longitude):
     """
     Given latitude and longitude strings, return a (station_name, wheelchair_accessible)
@@ -85,17 +87,23 @@ def find_stop_near(place_name):
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def main():
     """
     You can all the functions here
     """
     print(find_stop_near('Prudential Center'))
 =======
+=======
+>>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
 # def main():
 #     """
 #     You can all the functions here
 #     """
 #     print(find_stop_near('Babson College'))
+<<<<<<< HEAD
+>>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
+=======
 >>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
 
 
