@@ -86,25 +86,25 @@ def find_stop_near(place_name):
         #return should be simple as possible. dont return full sentence. Just return "Station Name. True"
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-def main():
-    """
-    You can all the functions here
-    """
-    print(find_stop_near('Prudential Center'))
-=======
-=======
->>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
+# <<<<<<< HEAD
+# <<<<<<< HEAD
+# def main():
+#     """
+#     You can all the functions here
+#     """
+#     print(find_stop_near('Prudential Center'))
+# =======
+# =======
+# >>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
 # def main():
 #     """
 #     You can all the functions here
 #     """
 #     print(find_stop_near('Babson College'))
-<<<<<<< HEAD
->>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
-=======
->>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
+# <<<<<<< HEAD
+# >>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
+# =======
+# >>>>>>> ac0c2036543f4af44530725d59c237d1431e2d55
 
 
 # if __name__ == '__main__':

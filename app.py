@@ -26,3 +26,4 @@ def get_stop():
         if stop:
             return render_template("mbta_results.html", place_name=place_name, stop=stop, is_accessible=is_accessible)
     return render_template("mbta_helper.html")
+
