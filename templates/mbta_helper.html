@@ -11,6 +11,9 @@
 </head>
 <body>
     <form method="POST" name="mbtaHelper">
+        {% if error %}
+        <p style="color:red">This place is not found.</p>
+        {% endif %}
         <div id=container>
             <p>
                 Please enter a location: 

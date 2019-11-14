@@ -20,10 +20,12 @@ def index():
 #             return f'{stop} is not wheelchair accessible'
 def get_stop():
     if request.method == "POST":
-        place_name = str(request.form["place_name"])
+        place_name = str(request.form["location"])
         stop, is_accessible = find_stop_near(place_name)
 
         if stop:
             return render_template("mbta_results.html", place_name=place_name, stop=stop, is_accessible=is_accessible)
-    return render_template("mbta_helper.html")
+        else:
+            return render_template("mbta_helper.html", error=True)
+    return render_template("mbta_helper.html", error=None)
 
