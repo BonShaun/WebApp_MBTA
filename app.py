@@ -22,8 +22,14 @@ def get_stop():
     if request.method == "POST":
         place_name = str(request.form["location"])
         stop, is_accessible = find_stop_near(place_name)
-
+        accessibility = ""
         if stop:
+            if is_accessible == "accessible":
+                accessibility = "The station is accessible to wheelchairs"
+            elif is_accessible == "inaccessible":
+                accessibility = "The station is not accessible to wheelchairs"
+            else:
+                accessibility = "The station does not have accessibility data available"
             return render_template("mbta_results.html", place_name=place_name, stop=stop, is_accessible=is_accessible)
         else:
             return render_template("mbta_helper.html", error=True)

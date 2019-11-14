@@ -73,13 +73,13 @@ def find_stop_near(place_name):
     lat, lng = get_lat_long(place_name)
     stop, station_accessible = get_nearest_station(lat,lng)
     if station_accessible == 1:
-        station_accessible = "Accessible"
+        station_accessible = "accessible"
         
     elif station_accessible == 2:
-        station_accessible = "Inaccessible"
+        station_accessible = "inaccessible"
         
     else:
-        station_accessible = "Accessibility data unavailable"
+        station_accessible = "accessibility data unavailable"
         
     return stop, station_accessible
 
