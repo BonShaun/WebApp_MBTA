@@ -41,9 +41,7 @@ def get_lat_long(place_name):
     lng = response_latlng['lng']
     return lat,lng
 
-# print(get_lat_long("Prudential Center"))
-
-
+print(get_lat_long("Prudential Center"))
 
 
 

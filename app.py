@@ -11,13 +11,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/mbta_helper/", methods=["GET", "POST"])
-# def get_stop(place_name):
-#     stop, is_accessible =  find_stop_near(place_name)
-#     if stop:
-#         if is_accessible == 1:
-#             return f'{stop} is wheelchair accessible'
-#         else:
-#             return f'{stop} is not wheelchair accessible'
+
 def get_stop():
     if request.method == "POST":
         place_name = str(request.form["location"])
