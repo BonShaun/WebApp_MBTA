@@ -30,7 +30,7 @@ def get_stop():
                 accessibility = "The station is not accessible to wheelchairs"
             else:
                 accessibility = "The station does not have accessibility data available"
-            return render_template("mbta_results.html", place_name=place_name, stop=stop, is_accessible=is_accessible)
+            return render_template("mbta_results.html", place_name=place_name, stop=stop, accessibility=accessibility)
         else:
             return render_template("mbta_helper.html", error=True)
     return render_template("mbta_helper.html", error=None)
