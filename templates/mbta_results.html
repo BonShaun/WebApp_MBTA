@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazing app to help you find nearest MBTA station</title>
+<style>
+    h2 {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <form method="POST" name="mbtaHelper">
+        <div id=container>
+            <h2>
+                The closest station from {{ place_name }} is {{ stop }}. The station is {{ is_accessible }}.
+            </h2>
+        </div>
+    </form>
+</body>
+</html>
